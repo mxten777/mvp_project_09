@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
-import { Shield, FileText, Calendar, User, Mail, Phone } from 'lucide-react';
+import { Shield, Calendar, User, Mail, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "개인정보 처리방침",
@@ -39,7 +40,7 @@ export default function PrivacyPolicy() {
                 </h2>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    만송시스템(주)(이하 "회사")는 다음의 목적을 위하여 개인정보를 처리합니다. 
+                    만송시스템(주)(이하 &ldquo;회사&rdquo;)는 다음의 목적을 위하여 개인정보를 처리합니다. 
                     처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 
                     이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
                   </p>
@@ -283,18 +284,18 @@ export default function PrivacyPolicy() {
           {/* 하단 네비게이션 */}
           <div className="mt-8 text-center">
             <div className="inline-flex space-x-4">
-              <a 
+              <Link 
                 href="/"
                 className="px-6 py-3 bg-white text-gray-700 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
               >
                 홈으로 돌아가기
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/terms"
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 이용약관 보기
-              </a>
+              </Link>
             </div>
           </div>
         </div>

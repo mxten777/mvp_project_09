@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
 import { FileText, Calendar, AlertCircle, CheckCircle, XCircle } from 'lucide-react';
 
@@ -39,7 +40,7 @@ export default function Terms() {
                 </h2>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    이 약관은 만송시스템(주)(이하 "회사")가 제공하는 웹사이트 및 관련 서비스(이하 "서비스")의 
+                    이 약관은 만송시스템(주)(이하 &ldquo;회사&rdquo;)가 제공하는 웹사이트 및 관련 서비스(이하 &ldquo;서비스&rdquo;)의 
                     이용과 관련하여 회사와 이용자간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
                   </p>
                   <div className="bg-green-50 rounded-lg p-4">

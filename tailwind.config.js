@@ -22,8 +22,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'ui-sans-serif', 'system-ui'],
-        mono: ['var(--font-geist-mono)', 'ui-monospace', 'SFMono-Regular'],
+  sans: ['Pretendard', 'Inter', 'ui-sans-serif', 'system-ui'],
+  mono: ['ui-monospace', 'SFMono-Regular'],
       },
     },
   },

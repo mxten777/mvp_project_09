@@ -1,82 +1,67 @@
-# 만송시스템(주) 홈페이지
+# 만송시스템(주) MVP 프로젝트
 
-기기입니다.
+## 프로젝트 개요
+- **프로젝트명:** 만송시스템(주) 홈페이지 MVP
+- **목적:** 산업용 시스템 통합 솔루션, 성공사례, 회사소개, 문의, 정책 안내 등 기업 공식 웹사이트 구축
+- **주요 기술:** Next.js 15, TypeScript, TailwindCSS, Lucide React, Pretendard/Inter 폰트
+- **배포:** Vercel
 
-## 🏢 회사 정보
-
-**회사명**: 만송시스템(주) (MSS - Mansong System Co., Ltd.)  
-**대표**: 임영무 (CEO)  
-**설립**: 산업용 시스템 통합 및 솔루션 전문기업  
-
-**연락처**:
-- 📞 전화: 010-5264-8027
-- 📧 이메일: limyoungmu@hanmail.net, limyoungmoo@mansong.kr
-
-**사업장**:
-- 🏢 본사: (31471) 충남 아산시 배방읍 광정로 210, B212호
-- 🏢 지사: (44715) 울산광역시 남구 화합로 162, 나인파크 906호
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## 📋 완성된 콘텐츠 요약
-
-### 1. 히어로 섹션
-- 만송시스템에 맞춘 메인 카피 3안 (산업용 시스템 통합 솔루션 강조)
-- CTA 버튼 2종 ("성공 사례 보기", "무료 상담 신청")
-
-### 2. 레퍼런스 섹션
-- 제조업/물류/공공기관 3개 분야별 성과 표
-- 구체적인 KPI (생산성 35% 향상, 배송 정확도 95% 등)
-- 400자 스토리텔링 버전 (중견 제조기업 B사 시스템 통합 사례)
-
-### 3. 제품/서비스 상세
-- 제품명: "산업용 시스템 통합 솔루션"
-- 4단계 해결 아키텍처 (분석 → 설계 → 구축 → 운영)
-- 4개 영역별 기대효과 (효율성/품질/비용/안정성)
-- FAQ 5문항과 상세 답변
-- 기술스택 배지 (React, Firebase, TailwindCSS 등)
-
-### 4. 문의/견적 안내
-- 신뢰감 있는 상담 유도 문구 2문장
-- 실제 연락처 및 응답 시간 명시
-
-### 5. 정책 문서
-- 개인정보 처리방침 (8개 조항, 국내 표준 준수)
-- 이용약관 (9개 조항, 서비스 특성 반영)
-
-**모든 콘텐츠는 React + TailwindCSS + Firebase + Vercel 환경의 MVP 버전에 최적화되어 있으며, 만송시스템의 브랜드 신뢰성과 전문성을 강조하면서도 시장 반응 테스트가 가능하도록 구성했습니다.**
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 폴더 구조
+```
+src/
+  app/           # Next.js App Router 기반 페이지
+    page.tsx     # 메인 페이지
+    privacy/     # 개인정보 처리방침
+    terms/       # 이용약관
+  components/
+    layout/      # Header, Footer, Layout 등 공통 컴포넌트
+    sections/    # Hero, Services, References, About, Contact 등 주요 섹션
+  utils/
+    accessibility.tsx # 접근성 유틸리티
+public/
+  images/        # 팀원, 회사, 서비스 관련 이미지
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 주요 기능 및 페이지
+- **홈페이지:** Hero, 서비스, 성공사례, 회사소개, 문의하기 섹션
+- **정책 페이지:** 개인정보 처리방침, 이용약관
+- **공통 컴포넌트:** Header, Footer, Layout, 접근성 유틸리티(스킵링크, ARIA 등)
+- **반응형 디자인:** 모든 디바이스에서 최적화
+- **접근성 강화:** aria-label, role, tabIndex, 포커스 스타일, 키보드 내비게이션 등
+- **SEO 최적화:** 메타 태그, Open Graph, robots 설정
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 개발/운영 환경
+- **Node.js**
+- **Next.js 15.5.3**
+- **TypeScript**
+- **TailwindCSS 3.4.0**
+- **Vercel**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 설치 및 실행
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+## 배포
+- Vercel에 main 브랜치 자동 배포
 
-To learn more about Next.js, take a look at the following resources:
+## 접근성(A11y) 정책
+- 모든 주요 섹션, 페이지, 컴포넌트에 접근성 속성 적용
+- 스킵링크, ARIA 라이브, 포커스 관리, 키보드 내비게이션 지원
+- 접근성 유틸리티 및 검사 함수 제공
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 팀원
+- 임영무 (CEO)
+- 임동근 (CTO)
+- 박수진 (PM)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 문의
+- 대표전화: 010-5264-8027
+- 이메일: limyoungmu@hanmail.net
 
-## Deploy on Vercel
+## 라이선스
+- 본 프로젝트는 만송시스템(주) 사내 사용 및 공식 홈페이지 용도로만 사용됩니다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+> 최신 개선 내역, 추가 기능, 배포/운영 정책 등은 팀 내 공유 및 업데이트 바랍니다.

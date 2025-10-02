@@ -102,22 +102,22 @@ const ServicesSection = () => {
   const colorClasses = getColorClasses(currentService.color);
 
   return (
-    <section id="solutions" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="solutions" className="py-10 sm:py-16 md:py-24 bg-white" aria-label="서비스 및 솔루션">
+    <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* 섹션 헤더 */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            <span className="text-gradient">서비스 & 솔루션</span>
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">서비스 & 솔루션</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             만송시스템의 전문적인 기술력으로 고객의 비즈니스 혁신을 이끌어갑니다.
           </p>
         </div>
 
         {/* 서비스 선택 탭 */}
-        <div className="flex flex-col lg:flex-row gap-8 mb-12">
-          <div className="lg:w-1/3 space-y-4">
+  <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-8 md:mb-12">
+          <div className="md:w-1/3 space-y-3 md:space-y-4">
             {services.map((service, index) => {
               const ServiceIcon = service.icon;
               const serviceColors = getColorClasses(service.color);
@@ -125,14 +125,17 @@ const ServicesSection = () => {
                 <button
                   key={service.id}
                   onClick={() => setActiveService(index)}
-                  className={`w-full p-6 rounded-xl transition-all duration-300 text-left group ${
+                  className={`w-full p-4 sm:p-6 rounded-xl transition-all duration-300 text-left group font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                     activeService === index
                       ? `${serviceColors.bg} ${serviceColors.border} border-2 shadow-lg`
                       : 'bg-gray-50 hover:bg-gray-100 border-2 border-transparent'
                   }`}
+                  role="tab"
+                  aria-selected={activeService === index}
+                  aria-label={`${service.title} 상세 보기`}
                 >
-                  <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center ${
                       activeService === index 
                         ? `bg-gradient-to-r ${serviceColors.gradient} text-white` 
                         : 'bg-gray-200 text-gray-600 group-hover:bg-gray-300'
@@ -140,17 +143,17 @@ const ServicesSection = () => {
                       <ServiceIcon size={24} />
                     </div>
                     <div className="flex-1">
-                      <h3 className={`text-lg font-bold mb-2 ${
+                      <h3 className={`text-xs sm:text-base font-bold mb-1 sm:mb-2 tracking-wide ${
                         activeService === index ? serviceColors.text : 'text-gray-900'
                       }`}>
                         {service.title}
                       </h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs sm:text-sm text-gray-600">
                         {service.subtitle}
                       </p>
                     </div>
                     <ChevronRight 
-                      size={20} 
+                      size={20}
                       className={`transform transition-transform ${
                         activeService === index ? 'rotate-90 text-blue-600' : 'text-gray-400'
                       }`}
@@ -162,47 +165,47 @@ const ServicesSection = () => {
           </div>
 
           {/* 선택된 서비스 상세 정보 */}
-          <div className="lg:w-2/3">
+          <div className="md:w-2/3 mt-8 md:mt-0">
             <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg overflow-hidden">
               
               {/* 서비스 이미지 */}
-              <div className="relative h-64 bg-gradient-to-r from-blue-500 to-purple-600">
+              <div className="relative h-40 sm:h-64 bg-gradient-to-r from-blue-500 to-purple-600">
                 {/* 이미지 플레이스홀더 - 실제 이미지로 교체 가능 */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <IconComponent size={64} className="mx-auto mb-4 opacity-80" />
-                    <h3 className="text-2xl font-bold">{currentService.title}</h3>
-                    <p className="text-blue-100 mt-2">{currentService.subtitle}</p>
+                    <IconComponent size={64} className="mx-auto mb-2 sm:mb-4 opacity-80" />
+                    <h3 className="text-base sm:text-xl font-extrabold">{currentService.title}</h3>
+                    <p className="text-blue-100 mt-1 sm:mt-2 text-xs sm:text-base">{currentService.subtitle}</p>
                   </div>
                 </div>
                 
                 {/* 플로팅 지표 */}
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                  <div className="flex items-center space-x-2">
+                <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-4">
+                  <div className="flex items-center space-x-1 sm:space-x-2">
                     <Star className="text-yellow-300" size={20} />
-                    <span className="text-white font-medium">고객 만족도 98%</span>
+                    <span className="text-white font-medium text-xs sm:text-base">고객 만족도 98%</span>
                   </div>
                 </div>
               </div>
 
-              <div className="p-8">
+              <div className="p-4 sm:p-8">
                 {/* 서비스 설명 */}
-                <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-base mb-6 sm:mb-8 leading-relaxed">
                   {currentService.description}
                 </p>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   
                   {/* 주요 기능 */}
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">주요 기능</h4>
-                    <ul className="space-y-3">
+                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-2 sm:mb-4 tracking-wide">주요 기능</h4>
+                    <ul className="space-y-2 sm:space-y-3">
                       {currentService.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start space-x-3">
-                          <div className={`w-6 h-6 rounded-full bg-gradient-to-r ${colorClasses.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                        <li key={idx} className="flex items-start space-x-2 sm:space-x-3">
+                          <div className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-r ${colorClasses.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
                             <Check size={14} className="text-white" />
                           </div>
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700 text-xs sm:text-base font-semibold">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -210,15 +213,13 @@ const ServicesSection = () => {
 
                   {/* 기대 효과 */}
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">기대 효과</h4>
-                    <div className="space-y-4">
+                    <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-2 sm:mb-4 tracking-wide">기대 효과</h4>
+                    <div className="space-y-3 sm:space-y-4">
                       {currentService.benefits.map((benefit, idx) => (
-                        <div key={idx} className="bg-gray-50 rounded-lg p-4">
+                        <div key={idx} className="bg-gray-50 rounded-lg p-3 sm:p-4">
                           <div className="flex justify-between items-center">
-                            <span className="text-gray-700 font-medium">{benefit.label}</span>
-                            <span className={`text-lg font-bold ${colorClasses.text}`}>
-                              {benefit.value}
-                            </span>
+                            <span className="text-gray-700 font-medium text-xs sm:text-base">{benefit.label}</span>
+                            <span className={`text-base sm:text-lg font-bold ${colorClasses.text}`}>{benefit.value}</span>
                           </div>
                         </div>
                       ))}
@@ -227,12 +228,12 @@ const ServicesSection = () => {
                 </div>
 
                 {/* CTA 버튼 */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <button className={`flex-1 bg-gradient-to-r ${colorClasses.gradient} text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all`}>
+                <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <button className={`flex-1 bg-gradient-to-r ${colorClasses.gradient} text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold shadow transition-all text-xs sm:text-base`}>
                       상세보기
                     </button>
-                    <button className="flex-1 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:border-gray-400 transition-colors">
+                    <button className="flex-1 border-2 border-gray-300 text-gray-700 px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold shadow hover:border-gray-400 transition-colors text-xs sm:text-base">
                       문의하기
                     </button>
                   </div>
@@ -243,13 +244,13 @@ const ServicesSection = () => {
         </div>
 
         {/* 추가 정보 섹션 */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">맞춤형 솔루션이 필요하신가요?</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 text-white text-center mt-8">
+          <h3 className="text-base sm:text-xl font-extrabold mb-2 sm:mb-4">맞춤형 솔루션이 필요하신가요?</h3>
+          <p className="text-blue-100 mb-4 sm:mb-6 max-w-2xl mx-auto text-xs sm:text-base">
             고객의 특별한 요구사항에 맞춘 완전 맞춤형 솔루션을 제공합니다. 
             15년 경험의 전문가가 직접 상담해드립니다.
           </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+          <button className="bg-white text-blue-600 px-4 sm:px-8 py-2 sm:py-3 rounded-xl font-semibold shadow hover:bg-gray-100 transition-colors text-xs sm:text-base">
             맞춤 상담 신청하기
           </button>
         </div>

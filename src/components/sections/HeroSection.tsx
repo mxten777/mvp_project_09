@@ -1,4 +1,5 @@
-'use client';
+
+"use client";
 
 import { useState } from 'react';
 import { ArrowRight, Play } from 'lucide-react';
@@ -31,7 +32,7 @@ const HeroSection = () => {
 
             {/* 메인 헤드라인 */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" aria-label="만성시스템">만성시스템</span>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" aria-label="만송시스템">만송시스템</span>
               <br /><span aria-label="신뢰할 수 있는 파트너">신뢰할 수 있는 파트너</span>
             </h1>
 

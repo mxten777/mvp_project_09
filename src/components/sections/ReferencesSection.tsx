@@ -1,46 +1,47 @@
+"use client";
 'use client';
 
 import { useState } from 'react';
-import { TrendingUp, Clock, DollarSign, Shield, Factory, Truck, Building } from 'lucide-react';
+import { TrendingUp, Clock, DollarSign, Shield, Factory, Settings } from 'lucide-react';
 
 const ReferencesSection = () => {
   const [selectedIndustry, setSelectedIndustry] = useState(0);
 
   const industries = [
     {
-      name: '제조업',
+      name: '화학공장',
       icon: Factory,
       color: 'blue',
-      problem: '생산 라인 자동화 부족, 품질관리 시스템 노후화',
-      solution: '통합 생산관리 시스템 + 자동화 솔루션 구축',
+      problem: '공정 모니터링 비효율, 안전관리 시스템 부재',
+      solution: '실시간 공정관제 시스템 + 통합 안전관리 솔루션',
       results: [
-        { label: '생산성 향상', value: '35%', icon: TrendingUp },
-        { label: '품질 개선', value: '28%', icon: Shield },
-        { label: '운영비 절감', value: '22%', icon: DollarSign }
+        { label: '공정 효율성', value: '42%', icon: TrendingUp },
+        { label: '안전사고 감소', value: '78%', icon: Shield },
+        { label: '에너지 절약', value: '25%', icon: DollarSign }
       ]
     },
     {
-      name: '물류/유통',
-      icon: Truck,
+      name: '철강/금속',
+      icon: Settings,
       color: 'green',
-      problem: '재고관리 비효율, 배송 추적 시스템 부재',
-      solution: '통합 물류관리 시스템 + 실시간 추적 솔루션',
+      problem: '용광로 온도제어 불안정, 품질 편차 발생',
+      solution: '고온공정 관제시스템 + AI 기반 품질예측',
       results: [
-        { label: '재고 효율성', value: '40%', icon: TrendingUp },
-        { label: '배송 정확도', value: '95%', icon: Clock },
-        { label: '비용 절감', value: '18%', icon: DollarSign }
+        { label: '품질 균일도', value: '45%', icon: TrendingUp },
+        { label: '에너지 효율', value: '32%', icon: DollarSign },
+        { label: '불량률 감소', value: '68%', icon: Shield }
       ]
     },
     {
-      name: '공공기관',
-      icon: Building,
+      name: '자동차부품',
+      icon: Settings,
       color: 'purple',
-      problem: '업무 프로세스 복잡, 데이터 관리 분산',
-      solution: '업무 통합 시스템 + 데이터 표준화 플랫폼',
+      problem: '라인 동기화 문제, 실시간 품질검사 한계',
+      solution: '스마트 생산라인 관제 + 인라인 품질검사 시스템',
       results: [
-        { label: '업무 효율성', value: '45%', icon: TrendingUp },
-        { label: '처리 시간 단축', value: '50%', icon: Clock },
-        { label: '관리비 절감', value: '25%', icon: DollarSign }
+        { label: '생산성 향상', value: '38%', icon: TrendingUp },
+        { label: '품질 향상', value: '52%', icon: Shield },
+        { label: '납기 단축', value: '28%', icon: Clock }
       ]
     }
   ];

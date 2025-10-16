@@ -1,6 +1,6 @@
 # 만송시스템(주) MVP 프로젝트
 
-## 프로젝트 개요
+##npm i -g vercel@latest 프로젝트 개요
 - **프로젝트명:** 만송시스템(주) 홈페이지 MVP
 - **목적:** 산업용 시스템 통합 솔루션, 성공사례, 회사소개, 문의, 정책 안내 등 기업 공식 웹사이트 구축
 - **주요 기술:** Next.js 15, TypeScript, TailwindCSS, Lucide React, Pretendard/Inter 폰트

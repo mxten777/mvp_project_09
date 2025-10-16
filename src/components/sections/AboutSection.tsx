@@ -1,3 +1,4 @@
+"use client";
 'use client';
 
 import { useState } from 'react';
@@ -60,12 +61,35 @@ const AboutSection = () => {
   ];
 
   const companyInfo = {
-    founded: '2010년',
-    projects: '200+',
-    clients: '150+',
+    founded: '2021년',
+    projects: '50+',
+    clients: '35+',
     satisfaction: '98%',
-    locations: ['충남 아산', '울산광역시']
+    locations: ['충남 아산']
   };
+
+  const companyHistory = [
+    {
+      year: '2021년',
+      event: '만송시스템 설립',
+      description: 'ABB코리아 파트너십 체결 및 사업 시작'
+    },
+    {
+      year: '2022년',
+      event: '첫 번째 프로젝트 수주',
+      description: '삼성전자 천안사업장 모니터링 시스템 구축'
+    },
+    {
+      year: '2023년',
+      event: '기술력 안정화',
+      description: '주요 고객 확보 및 직원 충원'
+    },
+    {
+      year: '2024년',
+      event: '사업 확장',
+      description: '50+ 프로젝트 완료 및 강소기업 지정'
+    }
+  ];
 
   return (
   <section id="about" className="py-20 bg-gray-50" aria-label="회사소개 섹션" role="region">
@@ -150,6 +174,31 @@ const AboutSection = () => {
                     <div className="text-3xl font-bold text-orange-600 mb-2">{companyInfo.satisfaction}</div>
                     <div className="text-gray-600">고객 만족도</div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 회사 연혁 */}
+            <div aria-label="회사 연혁" role="region" tabIndex={0}>
+              <h3 className="text-3xl font-bold text-gray-900 text-center mb-12" tabIndex={0}>회사 연혁</h3>
+              <div className="relative">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></div>
+                <div className="space-y-8">
+                  {companyHistory.map((item, index) => (
+                    <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                      <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                        <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                          <div className="text-2xl font-bold text-blue-600 mb-2">{item.year}</div>
+                          <h4 className="text-lg font-bold text-gray-900 mb-2">{item.event}</h4>
+                          <p className="text-gray-600 text-sm">{item.description}</p>
+                        </div>
+                      </div>
+                      <div className="relative z-10">
+                        <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+                      </div>
+                      <div className="w-1/2"></div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

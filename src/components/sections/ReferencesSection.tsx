@@ -82,15 +82,15 @@ const ReferencesSection = () => {
         </div>
 
         {/* 산업별 탭 */}
-  <div className="flex justify-center mb-8 sm:mb-12">
-          <div className="flex bg-white rounded-lg p-1 shadow-sm border overflow-x-auto">
+        <div className="flex justify-center mb-8 sm:mb-12 overflow-x-auto mobile-tab-container px-4 sm:px-0">
+          <div className="flex bg-white rounded-lg p-1 shadow-sm border min-w-max mx-auto">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
               return (
                 <button
                   key={index}
                   onClick={() => setSelectedIndustry(index)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 whitespace-nowrap mobile-touch-target ${
                     selectedIndustry === index
                       ? `${getColorClasses(industry.color)} border`
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
@@ -99,8 +99,8 @@ const ReferencesSection = () => {
                   aria-selected={selectedIndustry === index}
                   aria-label={`${industry.name} 성과 보기`}
                 >
-                  <IconComponent size={20} />
-                  <span>{industry.name}</span>
+                  <IconComponent size={16} className="sm:w-5 sm:h-5" />
+                  <span className="text-sm sm:text-base">{industry.name}</span>
                 </button>
               );
             })}

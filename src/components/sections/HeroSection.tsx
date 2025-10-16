@@ -31,14 +31,14 @@ const HeroSection = () => {
             </div>
 
             {/* 메인 헤드라인 */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" aria-label="만송시스템">만송시스템</span>
               <br /><span aria-label="신뢰할 수 있는 파트너">신뢰할 수 있는 파트너</span>
             </h1>
 
             {/* 메인 카피 (선택 가능) */}
-            <div className="space-y-4">
-              <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-600 leading-relaxed">
                 {heroCopies[selectedCopy]}
               </p>
               
@@ -79,11 +79,11 @@ const HeroSection = () => {
             {/* 통계 정보 */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-gray-200">
               <div className="text-center py-2">
-                <div className="text-2xl lg:text-3xl font-extrabold text-blue-600">15+</div>
+                <div className="text-2xl lg:text-3xl font-extrabold text-blue-600">30+</div>
                 <div className="text-sm text-gray-600">년간 경험</div>
               </div>
               <div className="text-center py-2">
-                <div className="text-2xl lg:text-3xl font-extrabold text-blue-600">200+</div>
+                <div className="text-2xl lg:text-3xl font-extrabold text-blue-600">50+</div>
                 <div className="text-sm text-gray-600">완료 프로젝트</div>
               </div>
               <div className="text-center py-2">

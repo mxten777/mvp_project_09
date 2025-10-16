@@ -12,9 +12,9 @@ const AboutSection = () => {
       name: '임영무',
       position: '대표이사',
       role: 'Founder',
-      description: '스마트팩토리, 관제 시스템 전문가. 만송시스템 설립자.',
+      description: '산업용 시스템 전문가. 만송시스템 설립자로 ABB 파트너십을 통한 혁신을 주도.',
       expertise: ['스마트팩토리', '관제 시스템', '산업 자동화', '시스템 통합'],
-      experience: '15+ 년',
+      experience: '30+ 년',
       avatar: '/images/team/ceo.jpg'
     },
     {
@@ -41,7 +41,7 @@ const AboutSection = () => {
     {
       icon: Target,
       title: '전문성',
-      description: '15년 이상의 산업용 시스템 경험을 바탕으로 최고 수준의 전문 서비스를 제공합니다.'
+      description: '30년간의 산업용 시스템 경험을 바탕으로 최고 수준의 전문 서비스를 제공합니다.'
     },
     {
       icon: Users,
@@ -96,21 +96,21 @@ const AboutSection = () => {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" tabIndex={-1}>
         
         {/* 섹션 헤더 */}
-  <div className="text-center mb-16" role="heading" aria-level={2}>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4" tabIndex={0}>
+        <div className="text-center mb-12 sm:mb-16" role="heading" aria-level={2}>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" tabIndex={0}>
             <span className="text-gradient">회사소개</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto" tabIndex={0}>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto" tabIndex={0}>
             만송시스템은 산업용 시스템 전문가들이 모여 고객의 성공을 위해 최선을 다하는 기술 파트너입니다.
           </p>
         </div>
 
         {/* 탭 메뉴 */}
-  <div className="flex justify-center mb-12" role="presentation">
-          <div className="bg-white rounded-lg p-1 shadow-sm border inline-flex">
+        <div className="flex justify-center mb-8 sm:mb-12" role="presentation">
+          <div className="bg-white rounded-lg p-1 shadow-sm border inline-flex w-full max-w-md sm:max-w-none sm:w-auto">
             <button
               onClick={() => setActiveTab('company')}
-              className={`px-6 py-3 rounded-lg font-medium transition-all focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 ${
+              className={`flex-1 sm:flex-none px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 text-sm sm:text-base ${
                 activeTab === 'company'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-gray-600 hover:text-gray-900'
@@ -123,7 +123,7 @@ const AboutSection = () => {
             </button>
             <button
               onClick={() => setActiveTab('team')}
-              className={`px-6 py-3 rounded-lg font-medium transition-all focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 ${
+              className={`flex-1 sm:flex-none px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 text-sm sm:text-base ${
                 activeTab === 'team'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-gray-600 hover:text-gray-900'
@@ -147,7 +147,7 @@ const AboutSection = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-6" tabIndex={0}>만송시스템(주)</h3>
                   <p className="text-lg text-gray-600 leading-relaxed mb-6" tabIndex={0}>
-                    2010년 설립된 만송시스템은 산업용 시스템 통합 및 솔루션 전문기업으로, 
+                    2021년 설립된 만송시스템은 산업용 시스템 통합 및 솔루션 전문기업으로, 
                     고객의 비즈니스 혁신과 성장을 지원하는 신뢰할 수 있는 기술 파트너입니다.
                   </p>
                   <p className="text-gray-600 leading-relaxed" tabIndex={0}>

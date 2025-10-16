@@ -92,11 +92,11 @@ const ContactSection = () => {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" tabIndex={-1}>
         
         {/* 섹션 헤더 */}
-  <div className="text-center mb-10 sm:mb-16" role="heading" aria-level={2}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" tabIndex={0}>
+        <div className="text-center mb-8 sm:mb-12 md:mb-16" role="heading" aria-level={2}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4" tabIndex={0}>
             <span className="text-gradient">문의하기</span>
           </h2>
-          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto" tabIndex={0}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto" tabIndex={0}>
             만송시스템의 전문가들이 고객님의 비즈니스 혁신을 위한 최적의 솔루션을 제안해드립니다.
           </p>
         </div>

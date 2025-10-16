@@ -107,11 +107,11 @@ const ServicesSection = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* 섹션 헤더 */}
-        <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">서비스 & 솔루션</span>
           </h2>
-          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             만송시스템의 전문적인 기술력으로 고객의 비즈니스 혁신을 이끌어갑니다.
           </p>
         </div>
@@ -249,7 +249,7 @@ const ServicesSection = () => {
           <h3 className="text-base sm:text-xl font-extrabold mb-2 sm:mb-4">맞춤형 솔루션이 필요하신가요?</h3>
           <p className="text-blue-100 mb-4 sm:mb-6 max-w-2xl mx-auto text-xs sm:text-base">
             고객의 특별한 요구사항에 맞춘 완전 맞춤형 솔루션을 제공합니다. 
-            15년 경험의 전문가가 직접 상담해드립니다.
+            30년간 축적된 경험과 전문성으로 직접 상담해드립니다.
           </p>
           <button className="bg-white text-blue-600 px-4 sm:px-8 py-2 sm:py-3 rounded-xl font-semibold shadow hover:bg-gray-100 transition-colors text-xs sm:text-base">
             맞춤 상담 신청하기

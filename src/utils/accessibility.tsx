@@ -83,7 +83,7 @@ export const SkipLink = () => {
   return (
     <a
       href="#main-content"
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:z-50"
+      className="absolute -top-full left-4 z-[100] bg-primary-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow-premium transition-all focus:top-4 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
     >
       본문으로 바로가기
     </a>

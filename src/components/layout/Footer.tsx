@@ -1,96 +1,121 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
+  const services = [
+    { name: '공장 모니터링', href: '#solutions' },
+    { name: '관제 시스템', href: '#solutions' },
+    { name: 'B2B 기술지원', href: '#solutions' },
+    { name: '시스템 통합', href: '#solutions' },
+  ];
+
+  const company = [
+    { name: '회사소개', href: '#about' },
+    { name: '성공사례', href: '#references' },
+    { name: '문의하기', href: '#contact' },
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white" aria-label="사이트 푸터" role="contentinfo">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" tabIndex={-1}>
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-8" role="presentation">
-          {/* 회사 정보 */}
-          <div className="space-y-4" aria-label="회사 정보" role="region" tabIndex={0}>
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">MSS</span>
+    <footer className="bg-slate-950 text-white" aria-label="사이트 푸터" role="contentinfo">
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+          {/* Company Info */}
+          <div className="sm:col-span-2 lg:col-span-1 space-y-5">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-premium">
+                <span className="text-white font-bold text-sm">MS</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-blue-400">만송시스템(주)</h3>
-                <p className="text-xs text-gray-400">Mansong System Co., Ltd.</p>
+                <h3 className="text-lg font-bold text-white">만송시스템</h3>
+                <p className="text-xs text-slate-500">Mansong System Co., Ltd.</p>
               </div>
             </div>
-            <p className="text-gray-300">
+            <p className="text-sm text-slate-400 leading-relaxed">
               산업용 시스템 솔루션 전문기업으로<br />
               고객의 성공을 위한 최적의 솔루션을 제공합니다.
             </p>
-            <div className="text-sm text-gray-400">
-              <p>대표: 임영무 (CEO)</p>
-            </div>
+            <p className="text-xs text-slate-500">대표: 임영무 (CEO)</p>
           </div>
 
-          {/* 서비스 */}
-          <div className="space-y-4" aria-label="서비스" role="region" tabIndex={0}>
-            <h4 className="text-lg font-semibold">서비스</h4>
-            <ul className="space-y-2 text-gray-300" role="list">
-              <li><Link href="#solutions" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="시스템 통합" tabIndex={0}>시스템 통합</Link></li>
-              <li><Link href="#solutions" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="산업용 솔루션" tabIndex={0}>산업용 솔루션</Link></li>
-              <li><Link href="#solutions" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="기술 컨설팅" tabIndex={0}>기술 컨설팅</Link></li>
-              <li><Link href="#solutions" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="유지보수" tabIndex={0}>유지보수</Link></li>
+          {/* Services */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-5 tracking-wide uppercase">서비스</h4>
+            <ul className="space-y-3">
+              {services.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-slate-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-1 group"
+                  >
+                    {item.name}
+                    <ArrowUpRight size={12} className="opacity-0 -translate-y-0.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* 회사 */}
-          <div className="space-y-4" aria-label="회사" role="region" tabIndex={0}>
-            <h4 className="text-lg font-semibold">회사</h4>
-            <ul className="space-y-2 text-gray-300" role="list">
-              <li><Link href="#about" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="회사소개" tabIndex={0}>회사소개</Link></li>
-              <li><Link href="#references" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="성공사례" tabIndex={0}>성공사례</Link></li>
-              <li><Link href="#contact" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="문의하기" tabIndex={0}>문의하기</Link></li>
-              <li><Link href="/career" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="채용정보" tabIndex={0}>채용정보</Link></li>
+          {/* Company */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-5 tracking-wide uppercase">회사</h4>
+            <ul className="space-y-3">
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-slate-400 hover:text-primary-400 transition-colors duration-200 flex items-center gap-1 group"
+                  >
+                    {item.name}
+                    <ArrowUpRight size={12} className="opacity-0 -translate-y-0.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* 연락처 */}
-          <div className="space-y-4" aria-label="연락처" role="region" tabIndex={0}>
-            <h4 className="text-lg font-semibold">연락처</h4>
-            <div className="space-y-3 text-gray-300">
-              <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-blue-400" />
-                <span>010-5264-8027</span>
+          {/* Contact */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-5 tracking-wide uppercase">연락처</h4>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Phone size={14} className="text-primary-400 flex-shrink-0" />
+                <span className="text-sm text-slate-400">010-5264-8027</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-blue-400" />
-                <div className="text-sm">
+              <div className="flex items-start gap-3">
+                <Mail size={14} className="text-primary-400 flex-shrink-0 mt-0.5" />
+                <div className="text-sm text-slate-400 space-y-0.5">
                   <div>limyoungmu@hanmail.net</div>
                   <div>limyoungmoo@mansong.kr</div>
                 </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin size={16} className="text-blue-400 mt-1" />
-                <div className="text-sm">
-                  <div className="font-medium text-white mb-1">본사</div>
-                  <div>(31471) 충남 아산시 배방읍<br />광정로 210, B212호</div>
-                  <div className="font-medium text-white mt-2 mb-1">지사</div>
-                  <div>(44715) 울산광역시 남구<br />화합로 162, 나인파크 906호</div>
+              <div className="flex items-start gap-3">
+                <MapPin size={14} className="text-primary-400 flex-shrink-0 mt-0.5" />
+                <div className="text-sm text-slate-400">
+                  <p className="text-xs font-medium text-slate-300 mb-0.5">본사</p>
+                  <p>충남 아산시 배방읍 광정로 210, B212호</p>
+                  <p className="text-xs font-medium text-slate-300 mt-2 mb-0.5">울산지사</p>
+                  <p>울산광역시 남구 화합로 162, 나인파크 906호</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* 하단 구분선 및 정책 링크 */}
-  <div className="border-t border-gray-700 mt-8 pt-8" aria-label="정책 및 사이트 링크" role="navigation" tabIndex={0}>
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+      {/* Bottom Bar */}
+      <div className="border-t border-slate-800/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-slate-500">
               © 2025 만송시스템(주). All rights reserved.
-            </div>
-            <div className="flex space-x-6 text-sm text-gray-400" role="list">
-              <Link href="/privacy" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="개인정보처리방침" tabIndex={0}>
+            </p>
+            <div className="flex items-center gap-6 text-xs text-slate-500">
+              <Link href="/privacy" className="hover:text-primary-400 transition-colors">
                 개인정보처리방침
               </Link>
-              <Link href="/terms" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="이용약관" tabIndex={0}>
+              <Link href="/terms" className="hover:text-primary-400 transition-colors">
                 이용약관
-              </Link>
-              <Link href="/sitemap" className="hover:text-blue-400 transition-colors focus:outline-blue-400 focus:ring-2 focus:ring-blue-400" aria-label="사이트맵" tabIndex={0}>
-                사이트맵
               </Link>
             </div>
           </div>

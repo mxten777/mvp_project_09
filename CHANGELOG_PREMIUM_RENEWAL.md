@@ -2,7 +2,7 @@
 
 > **작업일**: 2025년 1월  
 > **범위**: 글로벌 표준 프리미엄급 전면 리뉴얼  
-> **기술 스택**: Next.js 15.5 / React 19 / Tailwind CSS 3 / Framer Motion 12
+> **기술 스택**: Next.js 16 / React 19 / Tailwind CSS 3 / Framer Motion 12
 
 ---
 
@@ -128,8 +128,16 @@
 
 ---
 
-## 6. 빌드 상태
+## 6. Next.js 업데이트
+
+- **Next.js** 15.5.3 → **16.1.6** 업데이트 (보안 취약점 해결)
+- `npm audit` 취약점 0개 달성
+- `tsconfig.json` 자동 업데이트 (jsx: react-jsx, include 추가)
+
+---
+
+## 7. 빌드 및 배포 상태
 
 - **빌드 결과**: ✅ 성공
 - **정적 페이지**: 6개 (/, /privacy, /terms, /sitemap.xml, /robots.txt, /_not-found)
-- **First Load JS**: ~160kB
+- **배포**: Vercel Production ✅
